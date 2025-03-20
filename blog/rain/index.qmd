@@ -1,0 +1,336 @@
+---
+title: "A time series analysis on precipitation in Phyang"
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: Himalayan Institute of Alternatives Ladakh
+    affiliation_url: https://hial.edu.in
+    orcid_id: 0000-0002-8823-5300
+description: |
+    A time serie analysis of precipitation in Ladakh
+date: 09-01-2022
+categories:
+  - visualisation
+  - humanitarian
+  - R
+
+citation: false
+---
+
+```{r, echo=FALSE, warning=FALSE}
+
+#https://towardsdatascience.com/rainfall-time-series-analysis-and-forecasting-87a29316494e
+library(rbokeh)
+library(lubridate)
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+library(astsa)
+library(forecast)
+library(readxl)
+library(urca)
+library(ggfortify)
+library(tsutils)
+library(reshape2)
+library(xts)
+raw <- read.csv("phyang_basin_rain.csv")
+df <- raw[,2:41]
+df2 = lapply(df, function(x) {x[!is.na(x)]})
+df3 = sapply(df2, '[', seq(max(sapply(df2,length))))
+rainfall <- as.data.frame(df3)
+colnames(rainfall) <- seq(1981,2020)
+#yearly<- colSums(rainfall)
+
+#rainfall <- rbind(rainfall,yearly)
+rainfall$month <- c("jan", "feb","march","apr","may","jun","jul","aug","sep","oct","nov","dec")
+rainfall_long <- melt(rainfall, id.vars=c("month"))
+#rain_yr <- rainfall_long%>%filter(month== "year")
+
+#Create timeseries
+rain_ts <- ts(data = rainfall_long[,3], frequency = 12, start = c(1981,1))
+rain_df <- as.data.frame(rain_ts)
+
+```
+## Exploratory analysis
+Data was obtained using Google Earth Engine and taken from the dataset [CHIRPS Pentad](https://developers.google.com/earth-engine/datasets/catalog/UCSB-CHG_CHIRPS_PENTAD). For reference on R command and tools to be used a great source is the [online book on forecasting by Rob J Hyndman and George Athanasopoulos](https://otexts.com/fpp3/). 
+
+Plot of monthly precipitation from 1981 to 2021 in Phyang and histogram of all monthly rainfall. 
+
+```{r, echo=FALSE, warning=FALSE}
+#autoplot(rain_ts) + ylab("Rainfall (mm2)") + xlab("Datetime") + 
+  #scale_x_date(date_labels = '%Y', breaks = '3 year') +
+  #theme_bw() + ggtitle("Phyang rainfall 1981-2021")
+
+library(rbokeh)
+rain_ts_df <- as.data.frame(rain_ts)%>% 
+  mutate('Date' = seq(from = as.Date("1981-01-01", '%Y-%m-%d'), to = as.Date("2020-12-31",'%Y-%m-%d'),by = 'month'))
+
+figure(width = 600, height = 400) %>%
+  ly_lines(Date, x, data = rain_ts_df, alpha = 0.3) %>%
+   ly_points(Date, x, data = rain_ts_df,
+    hover = list(Date,x), size = 3)
+
+
+
+h <- figure(width = 600, height = 400) %>%
+  ly_hist(x, data = rain_ts_df, breaks = 40, freq = FALSE) %>%
+  ly_density(x, data = rain_ts_df)
+h
+```
+
+## Rolling average, sum, median
+
+Plot shows the rolling average, max, median and sum over a period of 36 months. A reduction in precipitation can be observed between 1998-2010.
+
+```{r, echo=FALSE}
+library(zoo)
+period <- 36
+roll_avg <- rollmean(rain_ts, k = period) 
+roll_max <- rollmax(rain_ts, k = period)
+roll_med <- rollmedian(rain_ts, k = period)
+roll_sum <- rollsum(rain_ts, k = period)
+
+roll_tot <- ts.union(roll_avg, roll_max, roll_med, roll_sum)
+roll_tot_df <- as.data.frame(roll_tot)%>% 
+  mutate('Date' = seq(from = as.Date("1982-06-01", '%Y-%m-%d'), to = as.Date("2019-06-30",'%Y-%m-%d'),by = 'month'))
+
+p <- figure(width = 600, height = 300) %>%
+  ly_lines(Date, roll_avg, data = roll_tot_df, legend="roll avg") %>%
+  ly_lines(Date, roll_sum, data = roll_tot_df,color="red", legend="roll sum")%>%
+  ly_lines(Date, roll_max, data = roll_tot_df,color="blue", legend="roll max")%>%
+  ly_lines(Date, roll_med, data = roll_tot_df, color="green",legend="roll med")
+
+p
+
+
+```
+## Sub-annual series
+
+Rainfall data disaggregated per month showing highest rain in June and July and lowest in May October and November. Highest variability across years in found in March, June, July while lowest in September, October and November.
+Additionally distribution for the month of March(black line), June (green), and July (red) is shown.
+
+```{r, echo=FALSE}
+rain_ts_df$Month <- format(rain_ts_df$Date, "%h")
+rain_ts_df %>%
+  ggplot(aes(x = factor(Month, level=c('Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')), y = x)) +
+  geom_boxplot() +
+  labs(x = "Rainfall",
+       y = "Month)")+theme_bw()
+
+rain_mar <- rain_ts_df%>%filter(Month=="Mar")
+rain_jun <- rain_ts_df%>%filter(Month=="Jun")
+rain_jul <- rain_ts_df%>%filter(Month=="Jul")
+
+h <- figure(title="March rainfall distribution 1981-2020",width = 600, height = 300) %>%
+  ly_density(x, data = rain_mar, legend = "March")%>%
+   ly_density(x, data = rain_jun, legend = "June", color = "green")%>%
+  ly_density(x, data = rain_jul, legend="July", color="red")
+h
+
+```
+
+## Decomposition
+
+The strength of the trend and seasonal measured between 0 and 1, while “1” means there’s very strong of trend and seasonal occurred.
+
+```{r, echo=FALSE}
+
+decomp <- stl(rain_ts, s.window = 'periodic')
+
+#Plot decomposition
+autoplot(decomp) + theme_bw() + scale_x_date(date_labels = '%Y', breaks = '3 year') +
+    ggtitle("Remainder")
+
+Tt <- trendcycle(decomp)
+St <- seasonal(decomp)
+Rt <- remainder(decomp)
+#Trend Strength Calculation
+Ft <- round(max(0,1 - (var(Rt)/var(Tt + Rt))),1)
+#Seasonal Strength Calculation
+Fs <- round(max(0,1 - (var(Rt)/var(St + Rt))),1)
+
+data.frame('Trend Strength' = Ft , 'Seasonal Strength' = Fs)
+
+```
+
+## Seasonality analisys
+
+```{r, echo=FALSE}
+#Seasonal Plot
+seasonplot(rain_ts, year.labels = TRUE, col = 1:13, 
+   main =  "Seasonal Plot", ylab= "Rainfall (mm2)")
+
+#Seasonal Sub-Series Plot
+seasplot(rain_ts, outplot = 2, trend = FALSE, 
+      main = "Seasonal Subseries Plot", ylab= "Rainfall (mm2)")
+#Seasonal Boxplot
+seasplot(rain_ts, outplot = 3, trend = TRUE, 
+     main = "Seasonal Box Plot", ylab= "Rainfall (mm2)")
+
+#Seasonal Boxplot
+seasplot(rain_ts, outplot = 4, trend = TRUE, 
+     main = "Seasonal Box Plot", ylab= "Rainfall (mm2)")
+
+sp <- ggplot(rain_ts_df, aes(x=Date, y=x)) + geom_line()+
+  geom_smooth(method=loess, legend=FALSE)+
+  facet_wrap(~factor(Month, level=c('Jan', 'Feb', 'Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec')), ncol=3)+theme_bw()
+sp
+
+```
+
+## Forecasting
+Train period from 1981 to 12.2015 and test period from 01.2016
+
+```{r, echo=FALSE}
+#Create Train Set
+rain_train <- window(rain_ts, end = c(2015,12))
+#Create Test Set 
+rain_test <- window(rain_ts, start = c(2016,1))
+```
+
+Data it is checked against stationary state.
+
+
+```{r, echo=FALSE}
+#Kwiatkowski–Phillips–Schmidt–Shin Test
+summary(ur.kpss(rain_ts)) 
+#Dickey-Fuller Test
+summary(ur.df(rain_ts)) 
+
+```
+Using 95% as confidence level, the null hypothesis (ho) for both of test defined as:
+
+KPSS Test: Data are stationary at 10% confidence (value of 0.3834).
+DF Test: 
+
+
+
+## ARIMA analysis
+
+Using different models for ARIMA.
+
+```{r, echo=FALSE}
+library(astsa)
+acf2(rain_ts)
+fit1 <- Arima(rain_train, order = c(1,0,2), seasonal = c(1,0,2))
+#fit2 <- Arima(rain_train, order = c(2,0,2), seasonal = c(2,0,2))
+#fit3 <- Arima(rain_train, order = c(1,0,1), seasonal = c(1,0,1))
+#fit4 <- Arima(rain_train, order = c(2,0,1), seasonal = c(2,0,1))
+#fit5 <- Arima(rain_train, order = c(0,0,2), seasonal = c(0,0,2))
+fit6 <- auto.arima(rain_train, stepwise = FALSE, 
+        approximation = FALSE)
+
+#models <- data.frame('Model-1' = fit1$aicc, 'Model-2' = fit2$aicc, 
+ #    'Model-3' = fit3$aicc,
+     
+  #   'Model-5' =  fit5$aicc,'Auto.Arima'= fit6$aicc,
+   #   row.names =   "AICc Value")
+#models
+#model 4 missing
+checkresiduals(fit6)
+```
+
+
+## ETS model
+
+```{r, echo=FALSE}
+#ETS Model
+fit_ets <- ets(rain_train, damped =TRUE)
+checkresiduals(fit_ets)
+```
+
+## Forecasting
+
+```{r, echo=FALSE}
+#Modifying Data For ggplot
+model_1 <- forecast(fit6, h=60) 
+model_1 <- as.data.frame(model_1$mean)
+model_1_plot <- model_1 %>% 
+  mutate('Date' = seq(from = as.Date("2016-01-01", '%Y-%m-%d'), to = as.Date("2020-12-31",'%Y-%m-%d'),by = 'month'))
+
+model_ets <- forecast(fit_ets, h=60)
+model_ets <- as.data.frame(model_ets$mean)
+model_ets_plot <- model_ets %>% 
+  mutate('Date' = seq(from = as.Date("2016-01-01", '%Y-%m-%d'), to = as.Date("2020-12-31",'%Y-%m-%d'),by = 'month'))
+
+#colnames(model_1) <- "Phyang_rain"
+#colnames(model_ets) <- "Phyang_rain"
+rain_ts_df <- as.data.frame(rain_ts)%>% 
+  mutate('Date' = seq(from = as.Date("1981-01-01", '%Y-%m-%d'), to = as.Date("2020-12-31",'%Y-%m-%d'),by = 'month'))
+
+rain_train_df <- as.data.frame(rain_train)%>% 
+  mutate('Date' = seq(from = as.Date("1981-01-01", '%Y-%m-%d'), to = as.Date("2015-12-31",'%Y-%m-%d'),by = 'month'))
+
+#model_ar_plot <- rbind(rain_train_df,model_1_plot)
+
+#model_ets_plot <- rbind(rain_train_df, model_ets)
+
+
+#colors <- c("ARIMA Model Forecast 2018" = "blue", "ETS Model Forecast 2018" = "red", "Actual Data" = "black")
+
+
+#Creating Plot
+
+ggplot() + geom_line(model_1_plot,
+   mapping = aes(x=Date, y=x, 
+  color= "ARIMA Model Forecast 2018"),lty = 5) +
+  geom_line(model_ets_plot,
+  mapping = aes(x=Date, y=x, 
+  color= "ETS Model Forecast 2018"),lty= 2) +
+  geom_line(rain_ts_df,mapping = aes(x=Date, y=x, 
+  color= "Actual Data"), lty = 1, show.legend = TRUE) +
+  ylab("Rainfall (mm2)") + xlab("Datetime") + 
+  scale_x_date(date_labels = '%Y', breaks = '3 year', 
+  minor_breaks = '2 month', limits = as.Date(c("2015-01-03", "2020-01-07"))) +
+  theme_bw() + ggtitle("Phyang 1981-2020")
+
+
+
+
+
+```
+## Accuracy of models
+```{r, echo=FALSE}
+#ARIMA Model Accuracy
+accuracy(forecast(fit6, h=12), rain_test)
+
+#ETS Model Accuracy
+accuracy(forecast(fit_ets, h=12), rain_test)
+
+
+```
+##Forecasting and plot
+
+```{r, echo=FALSE}
+#Create Model
+ARIMA_Model <- Arima(rain_ts, order = c(1,0,2), 
+   seasonal = c(1,0,2))
+ETS_Model <- ets(rain_ts, damped = TRUE, model = "AAA")
+
+#ARIMA Model Forecast
+autoplot(forecast(ARIMA_Model, h=48)) + theme_bw() + 
+  ylab("Rainfall (mm2)") + xlab("Datetime") + 
+  scale_x_date(date_labels = '%Y', 
+  breaks = '3 year', minor_breaks = '2 month', limits = as.Date(c("2010-01-03", "2024-01-07"))) +
+  theme_bw() + ggtitle("Phyang Rainfall Forecast 2020-2024 
+  ARIMA Model")
+#ETS Model Forecast
+autoplot(forecast(ETS_Model, h=48)) + theme_bw() + 
+  ylab("Rainfall (mm2)") + xlab("Datetime") + 
+  scale_x_date(date_labels = '%b - %Y', breaks = '3 year', 
+  minor_breaks = '2 month', limits = as.Date(c("2010-01-03", "2024-01-07"))) +
+  theme_bw() + ggtitle("Phyang Rainfall Forecast 2020-2024 
+  ETS Model")
+
+```
+
+
+
+
+
+
+
+
+
+
+

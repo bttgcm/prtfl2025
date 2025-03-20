@@ -1,0 +1,121 @@
+/*-- scss:defaults --*/
+
+// Define Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+$title-font-family: 'Bebas Neue', Georgia, serif !important;
+$body-font-family: 'Roboto', Arial, sans-serif !important;
+$body-font-weight: 300;
+$title-font-weight: 300;
+
+$font-size-base: 0.95rem;
+$code-block-font-size: 0.7rem;
+$nav-link-active-weight: 500;
+
+// Define Colours
+$zv-black:  #202020;
+$zv-white:  #FAFAFA;
+$zv-light-grey: #EEEEEE;
+$zv-mid-grey: #555555;
+$zv-teal:   #0AB3C7;
+$zv-fuchia: #C81E87;
+$zv-blue:   #3D52D5;
+$gb-red: #E87800;
+$zv-navy:   #003E74;
+$gb-red: #CC0000;
+
+// SCSS variables
+$body-color: $zv-black;
+$primary: $zv-light-grey;
+$link-color: $gb-red;
+$body-bg: $zv-light-grey;
+$code-block-bg: $zv-light-grey;
+$code-block-border-color: $zv-black;
+$code-color: $zv-fuchia;
+
+
+// Custom CSS styling
+
+// -- Text
+p{
+  font-family: $body-font-family;
+  font-weight: $body-font-weight;
+  font-size: 1.1rem;
+}
+
+h1, h2 {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+}
+
+.navbar {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  font-size: 2rem;
+}
+
+link {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar-brand, .nav-link{
+      font-size: larger; // xx-small, x-small, small, medium, large, larger,
+                         // x-large, xx-large
+}
+
+
+// -- Navbar interactive color. (Hacky - return to later.)
+.navbar-title:hover, .nav-link:hover, .nav-link.active {color: $gb-red !important;}
+
+#navbarCollapse:hover, #navbarCollapse:active {color: $gb-red !important;}
+
+a.dropdown-item:hover{color: $gb-red !important}
+.aa-SubmitIcon:hover {fill: $gb-red !important}
+
+//.nav-menu-professional.nav-link.dropdown-toggle.show {colour: $gb-red !important;}
+
+
+
+// -- Custom floats
+.small_right, .small_left {
+  display: inline-block;
+  width: 33%;
+  max-width: 200px;
+}
+.small_left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+.small_right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.small_left img, .small_right img{
+  max-width: 100%;
+}
+
+
+.medium_right, .medium_left {
+  display: inline-block;
+  width: 55%;
+  max-width: 270px;
+}
+.medium_left {
+  float: left;
+  margin: 1em 1em 1em 0;
+}
+.medium_right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+.medium_left img, .medium_right img{
+  max-width: 100%;
+}
+

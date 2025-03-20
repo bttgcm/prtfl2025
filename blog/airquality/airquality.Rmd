@@ -1,0 +1,25 @@
+---
+title: "A short exploration on air quality monitoring"
+description: |
+    Air quality in an office
+preview: airquality.jpg
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: Himalayan Institute of Alternatives Ladakh
+    affiliation_url: https://hial.edu.in
+    orcid_id: 0000-0002-8823-5300
+categories:
+  - environmental monitoring
+  - interactive visualization
+date: 03-05-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+I have been exploring about air quality using the Temptop M2000 2nd Generation to [check air quality in the office](https://observablehq.com/@bttgcm/office-air-quality). Additionally, I am trying to learn ObservableHQ to communicate data.
+
+![](airquality.jpg)
+
+

@@ -1,0 +1,18 @@
+---
+title: "Notebook"
+listing:
+  contents: blog
+  sort: "date desc"
+  type: grid
+  categories: true
+  feed: true
+  fields: [image,title]
+html:
+    grid:
+      margin-width: 400px
+      body-width: 550px
+    css: 
+      - styles.css
+      - css/playfair-display.css
+      - css/roboto.css
+---

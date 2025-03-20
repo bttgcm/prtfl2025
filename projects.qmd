@@ -1,0 +1,43 @@
+---
+title: "Work samples"
+format:
+  html:
+    grid:
+      margin-width: 300px
+      body-width: 600px
+    toc: true
+    css: 
+      - styles.css
+      - css/playfair-display.css
+      - css/roboto.css
+---
+
+## Design
+
+[PDF portfolio of selected works](img/Butte_portfolio_arch.pdf)
+
+## Research Articles
+
+Butte, Giacomo, Khadka Karishma, Macaulay Bobby and Sanjeev Buchar. ['Spring Revival in the Mid-Hills of the Himalaya: A Socioeconomic Assessment Using Benefit–Cost Analysis'](https://bioone.org/journals/mountain-research-and-development/volume-44/issue-4/mrd.2024.00020/Spring-Revival-in-the-Mid-Hills-of-the-Himalaya/10.1659/mrd.2024.00020.full).Mountain Research and Development, 44-4, 2024
+
+Butte, Giacomo, Yady Tatiana Solano-Correa, Maria Valasia Peppa, Diana Marcela Ruíz-Ordóñez, Rachael Maysels, Nasser Tuqan, Xanthe Polaine, Carolina Montoya-Pachongo, Claire Walsh, and Thomas Curtis. [A Framework for Water Security Data Gathering Strategies](https://www.mdpi.com/2073-4441/14/18/2907). Water 14, no. 18 (January 2022)
+
+Butte, G., C. Niwagaba, and A. Nordin. [Assessing the Microbial Risk of Faecal Sludge Use in Ugandan Agriculture by Comparing Field and Theoretical Model Output'](https://doi.org/10.1016/j.watres.2021.117068). Water Research 197 (1 June 2021)
+
+Acharya, Kishor, Giacomo Butte, and David Werner. **'Environmental DNA Sequencing for Sustainable Aquaculture and Other Technologies for Water Quality Management'**. Conference at Kung Krabaen Bay Royal Development Study Center, 3-6 July 2023, 2023.
+
+Hiruy, Andualem Mekonnen, Jemila Mohammed, Mihret Mersha Haileselassie, Kishor Acharya, Giacomo Butte, Alemseged Tamiru Haile, Claire Walsh, and David Werner. ['Spatiotemporal Variation in Urban Wastewater Pollution Impacts on River Microbiomes and Associated Hazards in the Akaki Catchment, Addis Ababa, Ethiopia'](https://doi.org/10.1016/j.scitotenv.2022.153912). Science of The Total Environment 826 (20 June 2022)
+
+Pantha, Kalyan, Kishor Acharya, Sanjeeb Mohapatra, Santosh Khanal, Niroj Amatya, Carolina Ospina-Betancourth, Giacomo Butte, Suman Dhun Shrestha, Prajwal Rajbhandari, and David Werner. [Faecal Pollution Source Tracking in the Holy Bagmati River by Portable 16S rRNA Gene Sequencing](https://doi.org/10.1038/s41545-021-00099-1). Npj Clean Water 4, no. 1 (18 February 2021): 1--10.
+
+## Reporting
+
+*Coursework /* [What COVID recovery policies for Ladakh? A preliminary screening](img/Butte_ladakh_policy.pdf)
+
+*Coursework /* [Analysis of migration patters in the italian Alps](img/Butte_mountain.pdf)
+
+*Coursework /* [Report on basic characterisation of Ladakh](img/Butte_Ladakh.pdf)
+
+*Coursework /* [Preliminary design for a 22 storey tower](img/Butte_coursework_concrete.pdf)
+
+*Coursework /* [Financial appraisal for the construction of a temporary bridge](img/Butte_hammersmith.pdf)

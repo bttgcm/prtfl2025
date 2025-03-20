@@ -1,0 +1,15 @@
+{
+  "hash": "bf2060ba04dcbfd0e165000a8c4e2941",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"A short exploration on air quality monitoring\"\ndescription: |\n    Air quality in an office\npreview: airquality.jpg\nauthor:\n  - name: Giacomo Butte\n    url: https://giacomobutte.com\n    affiliation: Himalayan Institute of Alternatives Ladakh\n    affiliation_url: https://hial.edu.in\n    orcid_id: 0000-0002-8823-5300\ncategories:\n  - environmental monitoring\n  - interactive visualization\ndate: 03-05-2022\noutput:\n  distill::distill_article:\n    self_contained: false\n---\n\n\n\nI have been exploring about air quality using the Temptop M2000 2nd Generation to [check air quality in the office](https://observablehq.com/@bttgcm/office-air-quality). Additionally, I am trying to learn ObservableHQ to communicate data.\n\n![](airquality.jpg)\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

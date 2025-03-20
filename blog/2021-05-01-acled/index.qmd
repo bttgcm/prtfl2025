@@ -1,0 +1,20 @@
+---
+title: "Interactive map of violent events"
+author: "Giacomo Butte"
+description: |
+    An interactive map of violent events in Sudan based on ACLED dataset
+date: "2021-05-01"
+categories:
+  - visualisation
+  - humanitarian
+image: acled02.jpg
+image-alt: ""
+draft: false
+appendix-style: plain #(default, plain, none)
+bibliography: ../library.bib
+citation: false
+---
+
+While working in Sudan for ICRC and looking at violents events that happened in the last years I created [this interactive map](https://bttgcm.shinyapps.io/Sudan_Violent_Events/#section-timeseries) that allows to get some of the information contained in the [ACLED datasets](https://acleddata.com).
+
+![](acled02.jpg)

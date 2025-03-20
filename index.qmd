@@ -1,0 +1,58 @@
+---
+title: ""
+output-file: "index.html"
+
+title-block-style: default
+lang: en
+
+format: 
+  closeread-html:
+    css: 
+      - styles.css
+      - css/playfair-display.css
+      - css/roboto.css
+
+    code-tools: false
+    fig-format: svg
+    toc: false
+    linkcolor: tomato
+    cr-style:
+      narrative-background-color-overlay: "#e2e2e2"
+      narrative-text-color-overlay: "#e2e2e2"
+---
+
+
+
+
+
+
+
+
+:::::: {.cr-section layout="sidebar-left"}
+
+
+::: {#cr-002}
+![](img/career.svg)
+:::
+
+::: {#cr-003}
+![](img/career03.png)
+:::
+
+::: {#cr-edu}
+![](img/edu.png)
+:::
+
+
+::: {#cr-000}
+![](img/NSB.jpg)
+:::
+I have covered different roles that explore the relation between the built, the natural environment and human society. @cr-000
+
+I mainly work along three axis: research and knowledge communication, design and project implementation supported by studies in design and construciton, environmental engineering and data science. @cr-edu
+
+Working in different countries allowed me to experience a diversity of values, modes of working, cultures. @cr-002
+
+You can find a [sample of works](projects.qmd) and more [details about](about.qmd) my background.
+
+::::::

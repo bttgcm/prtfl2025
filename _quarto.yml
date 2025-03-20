@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "GB"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - projects.qmd
+      - about.qmd
+      - href: blog.qmd
+        text: notebook
+
+
+format:
+  html:
+    toc: true
+    theme: [litera,custom.scss] #litera custom.scss
+    #css: styles.css
+    fontsize: "15px"
+    linestretch: 1.6
+    mainfont: "Roboto"
+    monofont: "Fira Mono"
+    smooth-scroll: true
+    code-link: false
+    grid:
+      margin-width: 350px
+
+
+editor: visual
+page-footer:
+    #background: light
+    border: true
+    left: "Copyright 2025, Giacomo Butte"
+    center: ""
+
+reference-location: margin
+citation-location: margin

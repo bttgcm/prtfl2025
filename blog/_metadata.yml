@@ -1,0 +1,29 @@
+# options apply to all posts in this folder
+
+# freeze computational output
+freeze: auto
+
+# Make a big title block
+title-block-banner: false
+
+# long dates
+date-format: long
+
+# smooth scroll
+smooth-scroll: true
+
+# Default author
+# citation
+citation: false
+
+format:
+  html:
+    grid:
+      margin-width: 450px
+      body-width: 500px
+    toc: true
+
+# Enable CC licence appendix
+#license: "CC BY"
+
+bibliography: ../library.bib
