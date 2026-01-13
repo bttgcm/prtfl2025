@@ -1,0 +1,15 @@
+{
+  "hash": "e0e77d68d1736da6958be8bc73536a28",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Article published on Water Journal\"\ndescription: |\n    A framework for data gathering for Water Security\npreview: dgs_01.png\nauthor:\n  - name: Giacomo Butte\n    url: https://giacomobutte.com\n    affiliation: Newcastle University\n    affiliation_url: https://nclu.ac.uk\n    orcid_id: 0000-0002-8823-5300\ndate: 03-09-2022\noutput:\n  distill::distill_article:\n    self_contained: false\n---\n\n\n\nWith colleagues fro the [Water Security Hub](https://www.watersecurityhub.org) we wrote an article that proposes a framework for organizing data collection for Water Security. Within the vast spectrum of definitions and concepts that already exist, we suggest a methodology to guide practitioners through this complexity.\n\n[Read the full article](https://www.mdpi.com/2073-4441/14/18/2907).\n\n![](dgs_01.png)\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

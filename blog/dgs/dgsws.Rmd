@@ -1,0 +1,24 @@
+---
+title: "Article published on Water Journal"
+description: |
+    A framework for data gathering for Water Security
+preview: dgs_01.png
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: Newcastle University
+    affiliation_url: https://nclu.ac.uk
+    orcid_id: 0000-0002-8823-5300
+date: 03-09-2022
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+With colleagues fro the [Water Security Hub](https://www.watersecurityhub.org) we wrote an article that proposes a framework for organizing data collection for Water Security. Within the vast spectrum of definitions and concepts that already exist, we suggest a methodology to guide practitioners through this complexity.
+
+[Read the full article](https://www.mdpi.com/2073-4441/14/18/2907).
+
+![](dgs_01.png)
+
+

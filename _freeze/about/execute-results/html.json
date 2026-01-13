@@ -1,0 +1,15 @@
+{
+  "hash": "10a6b8dce3b78a7e04948c900da86d62",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"\"\neditor: \n  markdown: \n    wrap: 72\n---\n\n\n\n\n## News\n\n2026 Q1: will be finishing an economic valuation for spring revival in\nNepal and will be teaching for one semester at ADA-Baku.\n\n## Bio\n\nBelow an overview of my work experience and education. If you look for\ndetailed information see [my portfolio](img/portfolio.pdf), [CV\ndevelopment sector](img/cv_dev.pdf), [CV private\nsector](img/cv_private.pdf) or [Linkedin\npage](https://www.linkedin.com/in/giacomobutte/)\n\n[![](img/career.svg)](img/career.svg)\n\n## Capabilities {.unnumbered}\n\n[Project management in emergency and development context]{.gradient}:\nfeasibility studies; planning, management and monitoring of project\nactivities; recruitment and management of team members; engagement with\ndiﬀerent stakeholders; monitoring and reporting.\n\n[Environmental engineering, sanitation and water security]{.gradient}:\ndesign and construction of water and sanitation infrastructure in\nparticular for medical facilities; microbial risk quantification; water\nsampling and monitoring; sound knowledge in WASH and water security.\n\n[Design, shelter and construction supervision]{.gradient}: knowledge of\nHumanitarian Shelter Coordination; experience in design of various types\nof buildings; supervision of construction in urban and rural context.\n\n[*Analysis and evaluation*]{.gradient}: ability to design and run\nnumerical models for risk assessment and economic analysis using\ndifferent tools and methods. Have published peer reviewed articles.\n\n## Education\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n| Degree | Istitution |\n|----------------------------------------|--------------------------------|\n| MSc Environmental Engineering | Newcastle University, UK 2019 |\n| MSc Sustainable Mountain Development | UHI Perth, UK 2024 |\n| MA Interior Architecture | Politecnico Milan, ITA, 2003‑2006 |\n| BA Industrial Design | Politecnico Milan, ITA, 2000‑2003 |\n| PG Cert Humanitarian Leadership | Manchester University, 2024-2025 |\n| PG Cert Civil Engineering | Surrey University, 2023 |\n| Micromaster Data, Economics, and Development Policy | MITx, 2023 |\n| Diploma in design and analysis of water supply line | Universitat Politecnica De Valencia, 2024 |\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

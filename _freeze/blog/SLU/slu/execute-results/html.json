@@ -1,0 +1,15 @@
+{
+  "hash": "3021c446c26f1ca0ddbaeaf1ced00932",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Urea dosing calculator\"\ndescription: |\n      an interactive calculator\npreview: journal02.jpg\nauthor:\n  - name: Giacomo Butte\n    url: https://giacomobutte.com\n    affiliation: Swedish Agricultural University\n    orcid_id: 0000-0002-8823-5300\ndate: 03-11-2024\n---\n\n\n\n![](img.png)\n\nI am collaborating with the Swedish Agricultural University in a project that aims at augmenting the use of urea as a wastewater treatment.\n\nThe first output was an [interactive calculator](https://bttgcm.github.io/slu_calc/) for urea application.\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

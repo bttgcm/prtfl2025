@@ -1,0 +1,18 @@
+---
+title: "Notes, news & explorations"
+listing:
+  contents: blog
+  sort: "date desc"
+  type: grid
+  categories: true
+  feed: true
+  fields: [image,title]
+  grid-columns: 2
+page-layout: full  # Options: article, full
+html:
+  grid:
+    margin-width: 400px
+    body-width: 900px
+css: styles.css
+---
+

@@ -1,0 +1,18 @@
+---
+title: "Urea dosing calculator"
+description: |
+      an interactive calculator
+preview: journal02.jpg
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: Swedish Agricultural University
+    orcid_id: 0000-0002-8823-5300
+date: 03-11-2024
+---
+
+![](img.png)
+
+I am collaborating with the Swedish Agricultural University in a project that aims at augmenting the use of urea as a wastewater treatment.
+
+The first output was an [interactive calculator](https://bttgcm.github.io/slu_calc/) for urea application.
