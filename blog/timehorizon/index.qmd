@@ -1,0 +1,75 @@
+---
+title: "Which horizon?"
+description: |
+  Ambiguities around operational time horizon \
+  in healthcare facility planning. \
+  A case from Bangladesh.
+
+preview: img01.png
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: MSF
+    orcid_id: 0000-0002-8823-5300
+categories:
+  - humanitarian
+  - writing
+date: 11-17-2024
+bibliography: references.yaml
+---
+
+
+# Introduction
+
+From a decision making perspective, humanitarian operations have been defined as environments that are dynamic, with high uncertainty and non-linear behaviour, unclear solutions, and have been often classified as wicked problems [@tatham_wicked_2011]. Within this context it is often hard to forecast future developments of an emergency. This work will focus on operational time horizon (OTH), where time horizon is defined as "that distance into the future to which a decision-maker looks when evaluating the consequences of a proposed action" [@ebert_time_1973, p.35]. Taking as an example the planning of a healthcare facility by Medécins Sans Frontières (MSF) in Bangladesh, this essays will show how ambiguity related to OTH can have several challenging implications.
+
+In the context of humanitarian logistics and more specifically construction, OTH takes various forms depending on the specific nature of the response as this essay will show. From a regulatory framework, such the Eurocodes BS EN 1990 [@eu_eurocodes_2024], OTH can be understood through the concept of design-life. Design-life refers to the period during which an item is expected to function while meeting a specified set of performance requirements. This concept not only determines the category of a building but also has significants implications for compliance with local building codes. Furthermore, design-life plays a crucial role in selecting materials and estimating the associated operational and management costs overs a structure's lifespan. From a disaster risk management perspective, where key factors include hazard, vulnerability and exposure [@reisinger_guidance_2020], OTH is particularly relevant as it directly influences the exposure component. Additionally, the sizing of certain building components, such as waste pits, is determined by the lifespan and, consequently, the OTH of a facility [@msf_public_2010]. Implications are not limited to construction but also impact operational considerations as well.
+
+From a humanitarian response perspective, OTH influences several important aspects of a project. Within the humanitarian-nexus approach, OTH can provide a clearer framework. Since 2016, this approach [@bradley_nexus_2023; @ocha_new_2017] has been promoted as a way to encourage different actors to work across multiple layers and tie frames to provide responses that go beyond immediate emergency needs. A clear OTH supports planning activites such as community engagement, capacity building, systemic interventions and project handover, ultimately contributing to more durable and robust outcomes.
+
+The following sections will give an overview of the case study. First, a brief description of the emergency context will be outlined. Then, the essay will provide information on the planning process and a brief discussion about the its implications and the ambiguities attached to OTH. Lastly, it will highlight some key reflections/takeaways to improve similar operations.
+
+# Context
+
+The Rohingya group, a Muslim minority originally from Myanmar, has been facing historical prosecution since late 18th century by the government and non-muslim communities of Myanmar. While there have been different migration fluxes starting from the 1990s [@milton_trapped_2017], the genocidal violence of 2017 [@messner_qualitative_2019; @urbano_crisis_2020; @msf_myanmar_2018] determined the forced migration to Bangladesh of approximately 1 million individuals to Bangladesh, creating the largest camp in operation world-wide withseveral challenges [@sullivan_hope_2022; @jeffries_health_2021].
+
+Trying to draft a possible future timeline of this crisis poses significant challenges due to the involvement of numerous internal/endogenous and external /exogenous factors that must resolve positively. Endogenous factors to the conflict include the granting of residency and citizenship by the governing authority of Myanmar to the Rohingya population; the persistent discrimination by the non-muslim population; the resolution of the ongoing civil conflict within Myanmar, along with its related power balance [@swazo_rohingya_2021; @nandi_hope_2024]. External factors include the support given to the junta by foreign states; the global community's engagement in the Rohingya crisis; the support that other countries (Bangladesh and Malaysia in particular) are willing to give. The result is a complex humanitarian crisis where future forecasting, even over a 5 year period, is highly uncertain.
+
+Within this crisis, MSF has played an active role since early 1990s [@wiggers2017] with an intensification of activities following the 2017 genocidal violence [@msf_myanmar_2017]. The activities undertaken are the establishments of healthcare facilities, improvement of water supply and construction of wastewater treatment plant. From a healthcare facility point of view, buildings have been erected, renovated and expanded at different stages. Initially, these efforts were guided by a rapid emergency response strategy, focusing on constructing temporary shelters [@msf_bangladesh_2018]. Over time, reflecting a shift in the decision-making process towards a more durable solutions, these structures were improved and upgraded.
+
+The case study taken into consideration, Hakhimpara Primary Health Care (HPHC), reflects these processes: the initial structure in bamboo was erected in 2018 by the MSF Barcelona Operative centre (OCBA), around 2020, the operations of the HPHC, together with another facility in Jamtoli, were then taken under the control of MSF Bruxelles Operative Centre (OCB). OCB first expanded the Jamtoli facility and then start planning the expansion of HPHC in 2022. This essays draws on the experience that the author had of the final planning and approval phase of the expansion in the first half of 2024. The activity hosted in the expanded facility relied heavily on the same set of medical services given in the current facility with the addition of new areas related to environmental health (waste zone and waste water treatment). It is worth mentioning that the facility, situated just outside the camps, serves mostly the hosted community and can be seen as one of the activities that aims at mitigating the impact of refugees relocation on the hosting areas.
+
+As common practice within MSF, the planning of the facility was carried by different teams from the various departments: medical, construction, logistic, electrical, environmental health, supply, with the addition of referents from headquarter and Bangladesh. The result was an international team of local staff, locally based expatriate, headquarter-based staff and local consultants. The team included individuals with varying levels of experience at MSF, ranging from several years to only a few months. Lastly, the engagment in the project of the MSF staff was very diverse, ranging from 6 months for the project manager, to 3 years for headquarters staff. During the planning phase, no clear and explicit indication of OTH was given at project level. Not addressing this issue created a situation were individual stakeholders adopted a OTH that they considered suitable since an operational time frame is essential in some planning decision. For example, waste zone pits were designed for a 20-year-lifespan, roofing in some buildings had a lifespan of 3-4 years, and a 10-15 years in others; plumbing with a 5 years life-span.
+
+# Discussion
+
+This presented case study demonstrated how the absence of an explicit OTH led individual stakeholders to adopt a great variety of operational time horizons. Several conditions may have favoured this. First, the uncertainty and dynamic nature of humanitarian crises played a role. Considering its challenges, humanitarian forecasting has received scarse attention [@altay2022]. This leads to assume that there is a resistance in investing resources trying to build a OHT consensus that may not be very robust.
+
+The adopted working process may also have encouraged this sitaution. Based on author experience, the adopted process, despite having coordination and communication aspects, it did leave ample space for individual choices. This approach is also favoured by the funding structure of MSF, which lacks institutional donors with their heavy planning and reporting requirements. From a sensemaking perspective [@turner_multifaceted_2023], this organisational structure could be defined as fragmented sensemaking [@maitlis_social_2005] with the adoption of an hedonic approach instead of an analitical one [@knoxclarke_decisionmaking_2020].
+
+The adoption of multiple OTHs among different stakeholders may reflect more than mere differences in opinion. It is likely that the type of a humanitarian intervention influences OTHs, with shorter one associated with emergency response and longer ones linked to more durable and systemic approaches. Within construction, this meant that some components were conceptualised as semi-temporary or more durable facility. Consequently, divergent OTHs may signify ambiguity and the presence of multiple, often conflicting, value systems arising from contested perspectives [@renn_coping_2011]. This condition can pose challenges at the operational level since maintaining a coherent understanding in emergency situations is particularly critical [@weick_collapse_2024].
+
+In construction-related matters, multiple OTHs between different stakeholders during the design phase let to inconsistencies in the lifespan planning of various facility components. To better understand the implication of these discrepancies two general considerations about construction should be kept in mind.
+
+First, given a limited set of resources, no structure can be designed to withstand every conceivable situation at all times. Planners must define---often through building codes---the specific range of conditions that a structure is intended to accommodate within acceptable performance limits. In case of an incoherent structure from OTH perspective, the some components may result "over-designed" while others "under-designed". This could have implications on cost efficiency, operation and maintenance. On the contrary, from a risk management perspective, in highly uncertain settings such as those in humanitarian response, the diverse levels of resilience that facility components offer may be seen as a "diversification" strategy [@markowitz_portfolio_1959] to better cope with future risks.
+
+Second, changes after the planning stage tend to incur significantly higher costs. Ideally, the plan and its consequent construction should minimise the need for modifications during the building's operational life. While this can be challenging given the uncertain nature of humanitarian responses, the presence of multiple OTHs exacerbates the issue. Such inconsistencies undermine project efficiency - a core humanitarian standard - and hinder its proper implementation.
+
+Following this brief overview of the implications of multiple OTHs, it is worth reflecting on whether sufficient justification exists to advocate for consensus-building around OTH. Resistance to allocating time and resources to a process with uncertain outcomes poses a significant challenge. Additionally, structural barriers within the organisation, such as annual funding cycles and the lack of reporting requirements to institutional donors, may not create support for this initiative.
+
+On the contrary, several reasons may be in favour of such exercise. Consensus building and sensemaking are also important social processes [@maitlis_social_2005] grounded in personal identity construction [@weick_sensemaking_1995] and therefore can vary greatly among individuals [@vandergiessen_collective_2022; @ferraro_tackling_2015]. Carrying an explicit activity towards an agreed OTH may be helpful to align understanding across different actors, and start a reflexive process around the mission aims, duration and interaction with the context.
+
+# Conclusion
+
+This essay looked at the misalignment between different project stakeholders regarding the expected OTH of a healthcare facility in Bangladesh. It explored how differing OTHs influenced both construction and operational activities, leading to inconsistencies in the design and performance of the facility. The analysis highlighted how factors such as the uncertainty inherent in humanitarian crises, structural barriers within the organisation, and the absence of a clear OTH guidance during planning contributed to these challenges. A few issues are raised for future consideration:
+
+-   Identifying a suitable OTH is challenging especially considering that emergencies more and more often evolve into protracted crises. Considering that facilities are likely to be used for extended periods and the emphasis of framework such as the NEXUS approach on integrated solutions, reflecting on OTHs is advisable and beneficial.
+
+-   Defining an OTH involves clarifying several other key aspects of a response such as its position on the emergency-to-systemic-change spectrum, the relation and involvement of local communities and governance actors. Engaging in this reflective process can lead to valuable insights, even if consensus is not achieved.
+
+-   Consensus-building is a social process. A more explicit exercise around its consensus can enhance participation, reduce ambiguities, and align sensemaking among diverse stakeholders. This not only contributes to empower humanitarian actors as proactive agents, but also could improve project coherence and resource allocation.
+
+These findings highlight the need, during operational missions, of engaging in an explicit process to determine OTH so to enhance project efficiency ad alignment with humanitarian standards and best practices.
+
+# References
+

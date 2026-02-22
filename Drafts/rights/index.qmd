@@ -1,0 +1,139 @@
+---
+title: "Human Rights evolution"
+description: |
+      an exploration from the CIRIGHTS Data Project
+preview: img.jpg
+author:
+  - name: Giacomo Butte
+    url: https://giacomobutte.com
+    affiliation: MSF
+    orcid_id: 0000-0002-8823-5300
+categories:
+  - R
+  - data
+date: 01-17-2026
+---
+
+While participating in courses within the LEAP program, one hears often about the increasing disrespect of Human Rights. To my knowledge, the (CIRIGHTS dataset)\[https://cirights.com\] is likely the most comprehensive, at least untill (ICMD)\[https://icmd.se\] will be available.
+
+Below a simple boxplot of the
+
+```{r}
+library(readr)
+library(dplyr)
+df <- read.csv("database.csv")
+
+library(dplyr)
+
+# Select columns 8 to 26 and Year column
+col_indices <- 9:15
+target_cols <- names(df)[col_indices]
+print(paste("Processing columns:", paste(target_cols, collapse = ", ")))
+
+# Filter function: only use values 0,1,2 (omit others/NA)
+mean_filtered <- function(x) {
+  valid_vals <- x[x %in% c(0, 1, 2)]
+  if(length(valid_vals) > 0) mean(valid_vals) else NA
+}
+
+# Calculate mean for each column by Year, using only 0,1,2 values
+means_by_year <- df %>%
+  select(year, all_of(target_cols)) %>%
+  group_by(year) %>%
+  summarise(across(all_of(target_cols), mean_filtered, .names = "mean_{.col}")) %>%
+  ungroup()
+
+# View results
+#print(means_by_year)
+
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+# Reshape to long format
+means_long <- means_by_year %>%
+  pivot_longer(-year, names_to = "Variable", values_to = "Mean") %>%
+  filter(!is.na(Mean))
+
+# Fix: Dynamically create scales for EXACT number of variables
+n_vars <- length(unique(means_long$Variable))
+line_types <- c(rep("solid", ceiling(n_vars/2)), rep("dashed", floor(n_vars/2)))
+
+
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+
+# Split 42 variables into groups of 12 panels each
+var_list <- unique(means_long$Variable)
+n_groups <- ceiling(length(var_list) / 12)  # ~4 plots
+
+# Create plots for each group
+plot_list <- list()
+for(i in 1:n_groups) {
+  vars_subset <- var_list[((i-1)*12 + 1):min(i*12, length(var_list))]
+  p <- ggplot(means_long %>% filter(Variable %in% vars_subset), 
+              aes(x = year, y = Mean, group = 1)) +
+    geom_line(linewidth = 1.1, color = "steelblue") +
+    geom_point(size = 2.2, color = "steelblue") +
+    facet_wrap(~ Variable, scales = "free_y", ncol = 4, nrow = 3) +
+    labs(title = paste("Mean Values by Year - Group", i, "(Vars", min(vars_subset), "-", max(vars_subset), ")")) +
+    theme_minimal() +
+    theme(strip.text = element_text(size = 9, face = "bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1))
+  plot_list[[i]] <- p
+}
+
+# Combine into single object or save separately
+combined_plot <- wrap_plots(plot_list, ncol = 1)  # Stack vertically
+print(combined_plot)
+
+
+
+```
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+
+# Add column with mean of ALL variables for each year (at the end)
+means_by_year <- means_by_year %>%
+  mutate(Overall_Mean = rowMeans(select(., -year), na.rm = TRUE))
+
+# View result
+print(means_by_year)
+
+
+col_indices <- 8:13
+target_cols <- names(df)[col_indices]
+
+# CORRECTED: Filter using dplyr (handles dimensions properly)
+df_filtered <- df %>%
+  filter(if_all(all_of(target_cols), ~ .x %in% c(0, 1, 2, NA_real_, NA)))
+
+# Reshape to long format
+df_long <- df_filtered %>%
+  select(year, all_of(target_cols)) %>%
+  pivot_longer(-year, names_to = "Variable", values_to = "Value") %>%
+  filter(Value %in% c(0, 1, 2) & !is.na(Value))
+
+# Boxplot: all individual values per year
+ggplot(df_long, aes(x = factor(year), y = Value, fill = Variable)) +
+  geom_boxplot(alpha = 0.7, position = position_dodge2(width = 0.9, padding = 0.1)) +
+  scale_fill_viridis_d(option = "plasma", alpha = 0.8) +
+  labs(title = "Boxplots of Individual Values (0,1,2 only) by Year",
+       subtitle = "Columns 8-26 | Position-dodged for multiple variables",
+       x = "Year", y = "Value", fill = "Variable") +
+  theme_minimal(base_size = 12) +
+  theme(legend.position = "bottom",
+        legend.direction = "horizontal",
+        legend.text = element_text(size = 8),
+        axis.text.x = element_text(angle = 45, hjust = 1))
+
+```

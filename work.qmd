@@ -21,8 +21,6 @@ source("img/carousel.R")
 
 [PDF portfolio of selected works](img/Butte_portfolio_arch.pdf)
 
-
-
 ## Research Articles
 
 [Spring Revival in the Mid-Hills of the Himalaya: A Socioeconomic Assessment Using Benefit–Cost Analysis]{.gradient}, Butte et al., *Mountain Research and Development, 44-4, 2024*, [Read](https://bioone.org/journals/mountain-research-and-development/volume-44/issue-4/mrd.2024.00020/Spring-Revival-in-the-Mid-Hills-of-the-Himalaya/10.1659/mrd.2024.00020.full)
@@ -38,12 +36,12 @@ source("img/carousel.R")
 [Faecal Pollution Source Tracking in the Holy Bagmati River by Portable 16S rRNA Gene Sequencing]{.gradient}, Pantha, et al., *Npj Clean Water 4, no. 1 (18 February 2021): 1--10*, [Read](https://doi.org/10.1038/s41545-021-00099-1)
 
 ## Data and science communication
+
 [Springstory: visual story telling to communicate socio-economic valuation of spring revival]{.gradient}[Read](https://bttgcm.github.io/springstory/), tools: R, Quarto, Closeread
 
 [Urea Dosing Calculator]{.gradient}[Read](https://bttgcm.github.io/slu_ammo/ammonia.html), Tools: R, Shiny
 
 [QMRA expalined]{.gradient}[Read](https://bttgcm.github.io/QMRA/), Tool: idyll
-
 
 ## Teaching
 
@@ -57,14 +55,12 @@ In some occasions I have been teaching at university level. These are the type o
 
 ## Reporting
 
-[What COVID recovery policies for Ladakh? A preliminary screening]{.gradient}, 
-*Coursework*, [Read](img/Butte_ladakh_policy.pdf)
+[What COVID recovery policies for Ladakh? A preliminary screening]{.gradient}, *Coursework*, [Read](img/Butte_ladakh_policy.pdf)
 
 [Analysis of migration patters in the italian Alps]{.gradient}, *Coursework*, [Read](img/Butte_mountain.pdf)
 
 [Report on basic characterisation of Ladakh]{.gradient}, *Coursework*, [Read](img/Butte_Ladakh.pdf)
 
-[Preliminary design for a 22 storey tower]{.gradient}, 
-*Coursework*, [Read](img/Butte_coursework_concrete.pdf)
+[Preliminary design for a 22 storey tower]{.gradient}, *Coursework*, [Read](img/Butte_coursework_concrete.pdf)
 
 [Financial appraisal for the construction of a temporary bridge]{.gradient}, *Coursework*, [Read](img/Butte_hammersmith.pdf)

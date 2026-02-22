@@ -1,0 +1,685 @@
+---
+references:
+- id: messner_qualitative_2019
+  accessed: "08:12:07"
+  author:
+  - family: Messner
+    given: Nicole
+  - family: Woods
+    given: Andrea
+  - family: Petty
+    given: Agnes
+  - family: Parmar
+    given: Parveen K.
+  - family: Leigh
+    given: Jennifer
+  - family: Thomas
+    given: Ernest
+  - family: Curry
+    given: Douglass
+  - family: Venters
+    given: Homer
+  - family: Gilbert
+    given: Andra
+  - family: Nelson
+    given: Tamaryn
+  - family: Lester
+    given: Ed
+  container-title: Conflict and Health
+  container-title-short: Confl Health
+  DOI: 10.1186/s13031-019-0227-8
+  ISSN: 1752-1505
+  issue: 1
+  issued: 2019-12
+  key: 2Q5KUV25
+  language: en
+  libraryID: 1
+  page: 41
+  providerKey: Zotero
+  source: DOI.org (Crossref)
+  title: "Qualitative evidence of crimes against humanity: the August
+    2017 attacks on the Rohingya in northern Rakhine State, Myanmar"
+  title-short: Qualitative evidence of crimes against humanity
+  type: article-journal
+  URL: "https://conflictandhealth.biomedcentral.com/articles/10.1186/s13031-019-0227-8"
+  volume: 13
+- id: urbano_crisis_2020
+  author:
+  - family: Urbano
+    given: Florencia
+  issue: 9
+  issued: 2020
+  key: 3HCLHV48
+  language: es
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: "La crisis humanitaria del pueblo rohingya (2017-2019):
+    ¿genocidio en pleno siglo XXI?"
+  type: article-journal
+- id: msf_myanmar_2018
+  accessed: "09:07:59"
+  author:
+  - family: MSF
+  issued: 2018
+  key: AMW43SGQ
+  language: en
+  libraryID: 1
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  title: "Myanmar/Bangladesh: \"No one was left\" - Death and Violence
+    Against the Rohingya \\| MSF"
+  title-short: Myanmar/Bangladesh
+  type: report
+  URL: "https://www.msf.org/myanmarbangladesh-%E2%80%98no-one-was-left%E2%80%99-death-and-violence-against-rohingya"
+- id: milton_trapped_2017
+  accessed: "08:34:19"
+  author:
+  - family: Milton
+    given: Abul
+  - family: Rahman
+    given: Mijanur
+  - family: Hussain
+    given: Sumaira
+  - family: Jindal
+    given: Charulata
+  - family: Choudhury
+    given: Sushmita
+  - family: Akter
+    given: Shahnaz
+  - family: Ferdousi
+    given: Shahana
+  - family: Mouly
+    given: Tafzila
+  - family: Hall
+    given: John
+  - family: Efird
+    given: Jimmy
+  container-title: International Journal of Environmental Research and
+    Public Health
+  container-title-short: IJERPH
+  DOI: 10.3390/ijerph14080942
+  ISSN: 1660-4601
+  issue: 8
+  issued: 2017-08-21
+  key: DLC9ASHS
+  language: en
+  libraryID: 1
+  page: 942
+  providerKey: Zotero
+  rights: "https://creativecommons.org/licenses/by/4.0/"
+  source: DOI.org (Crossref)
+  title: "Trapped in Statelessness: Rohingya Refugees in Bangladesh"
+  title-short: Trapped in Statelessness
+  type: article-journal
+  URL: "https://www.mdpi.com/1660-4601/14/8/942"
+  volume: 14
+- id: jeffries_health_2021
+  accessed: "08:20:35"
+  author:
+  - family: Jeffries
+    given: Rosanna
+  - family: Abdi
+    given: Hassan
+  - family: Ali
+    given: Mohammad
+  - family: Bhuiyan
+    given: Abu Toha Md Rezuanul Haque
+  - family: El Shazly
+    given: Mohamed
+  - family: Harlass
+    given: Sandra
+  - family: Ishtiak
+    given: Asm
+  - family: Mazhar
+    given: Md Khadimul Anam
+  - family: Prajapati
+    given: Mukeshkumar
+  - family: Pang
+    given: Qing Yuan
+  - family: Singh
+    given: Balwinder
+  - family: Tabu
+    given: Francis
+  - family: Baidjoe
+    given: Amrish
+  container-title: PLOS ONE
+  container-title-short: PLoS ONE
+  DOI: 10.1371/journal.pone.0253013
+  editor:
+  - family: Tappis
+    given: Hannah
+  ISSN: 1932-6203
+  issue: 6
+  issued: 2021-06-11
+  key: ILQRV5FE
+  language: en
+  libraryID: 1
+  page: e0253013
+  providerKey: Zotero
+  source: DOI.org (Crossref)
+  title: "The health response to the Rohingya refugee crisis post August
+    2017: Reflections from two years of health sector coordination in
+    Cox's Bazar, Bangladesh"
+  title-short: The health response to the Rohingya refugee crisis post
+    August 2017
+  type: article-journal
+  URL: "https://dx.plos.org/10.1371/journal.pone.0253013"
+  volume: 16
+- id: msf_bangladesh_2024
+  accessed: "08:28:15"
+  author:
+  - family: MSF
+  container-title: Doctors Without Borders \| MSF Eastern Africa
+  issued: 2024
+  key: 9DCP7SAV
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  title: Bangladesh \| MSF medical and humanitarian aid
+  type: webpage
+  URL: "https://msf.or.ke/our-work/where-we-work/bangladesh"
+- id: renn_coping_2011
+  accessed: "14:38:14"
+  author:
+  - family: Renn
+    given: Ortwin
+  - family: Klinke
+    given: Andreas
+  - family: Van Asselt
+    given: Marjolein
+  container-title: AMBIO
+  container-title-short: AMBIO
+  DOI: 10.1007/s13280-010-0134-0
+  ISSN: 0044-7447, 1654-7209
+  issue: 2
+  issued: 2011-03
+  key: 4G9QK5X6
+  language: en
+  libraryID: 1
+  page: 231-246
+  providerKey: Zotero
+  rights: "http://www.springer.com/tdm"
+  source: DOI.org (Crossref)
+  title: "Coping with Complexity, Uncertainty and Ambiguity in Risk
+    Governance: A Synthesis"
+  title-short: Coping with Complexity, Uncertainty and Ambiguity in Risk
+    Governance
+  type: article-journal
+  URL: "http://link.springer.com/10.1007/s13280-010-0134-0"
+  volume: 40
+- id: wiggers_10_
+  author:
+  - family: Wiggers
+    given: Petterik
+  key: 9HGMU4VQ
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: "10 YEARS FOR THE ROHINGYA REFUGEES IN BANGLADESH: PAST,
+    PRESENT AND FUTURE"
+  type: article-journal
+- id: msf_myanmar_
+  accessed: "12:41:04"
+  author:
+  - family: MSF
+  key: HUQU8VSN
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  title: "Myanmar/Bangladesh: Rohingya crisis - a summary of findings
+    from six pooled surveys \\| MSF"
+  title-short: Myanmar/Bangladesh
+  type: webpage
+  URL: "https://www.msf.org/myanmarbangladesh-rohingya-crisis-summary-findings-six-pooled-surveys"
+- id: msf_bangladesh_2018
+  accessed: "12:48:46"
+  author:
+  - family: MSF
+  issued: 2018
+  key: RIDBU7ZF
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  title: "Bangladesh: Building a hospital for Rohingya in three weeks \\|
+    MSF"
+  title-short: Bangladesh
+  type: webpage
+  URL: "https://www.msf.org/bangladesh-building-hospital-rohingya-three-weeks"
+- id: msf_myanmar_2017
+  accessed: "12:41:04"
+  author:
+  - family: MSF
+  issued: 2017
+  key: HUQU8VSN
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  title: "Myanmar/Bangladesh: Rohingya crisis - a summary of findings
+    from six pooled surveys \\| MSF"
+  title-short: Myanmar/Bangladesh
+  type: webpage
+  URL: "https://www.msf.org/myanmarbangladesh-rohingya-crisis-summary-findings-six-pooled-surveys"
+- id: swazo_rohingya_2021
+  author:
+  - family: Swazo
+    given: Norman
+  - family: Haque
+    given: Sk Mafizul
+  - family: Haque
+    given: Md Mahbudul
+  - family: Nower
+    given: Tasmia
+  call-number: 320.959 1089
+  collection-title: Routledge focus
+  ISBN: 978-0-367-34133-6
+  issued: 2021
+  key: IZ2SRQUG
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  publisher: Routledge
+  publisher-place: Abingdon New York (N.Y.)
+  source: BnF ISBN
+  title: "The Rohingya crisis: a moral, ethnographic, and policy
+    assessment"
+  title-short: The Rohingya crisis
+  type: book
+- id: nandi_hope_2024
+  accessed: "18:56:07"
+  author:
+  - family: Nandi
+    given: Sarah
+  container-title: The Conversation
+  issued: 2024-08-19
+  key: IYRIWZN8
+  language: en-GLOBAL
+  libraryID: 1
+  providerKey: Zotero
+  title: Hope on the horizon? What Bangladesh's regime change could mean
+    for Rohingya refugees
+  title-short: Hope on the horizon?
+  type: webpage
+  URL: "http://theconversation.com/hope-on-the-horizon-what-bangladeshs-regime-change-could-mean-for-rohingya-refugees-236472"
+- id: sullivan_hope_2022
+  author:
+  - family: Sullivan
+    given: Daniel
+  collection-title: Refugees international
+  issued: 2022
+  key: KIMIUHWC
+  libraryID: 1
+  providerKey: Zotero
+  title: "Hope amid Despair: Finding Solutions for Rohingya in
+    Bangladesh"
+  type: report
+  URL: "https://www.refugeesinternational.org/reports-briefs/hope-amid-despair-finding-solutions-for-rohingya-in-bangladesh/"
+- id: wiggers2017
+  accessed: 2024-11-06
+  author:
+  - family: Wiggers
+    given: Petterik
+  issued: 2017
+  key: 9HGMU4VQ
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: "10 Years for the Rohingya refugees in Bangladesh: past,
+    present and future"
+  type: article-journal
+  URL: "https://www.msf.org/ten-years-rohingya-refugeespast-present-and-future-report-summary"
+- id: knoxclarke_decisionmaking_2020
+  accessed: "08:56:16"
+  author:
+  - family: Knox Clarke
+    given: Paul
+  - family: Campbell
+    given: Leah
+  container-title: Journal of International Humanitarian Action
+  container-title-short: Int J Humanitarian Action
+  DOI: 10.1186/s41018-020-00068-2
+  ISSN: 2364-3412, 2364-3404
+  issue: 1
+  issued: 2020-12
+  key: SXPXTRVA
+  language: en
+  libraryID: 1
+  page: 2
+  providerKey: Zotero
+  source: DOI.org (Crossref)
+  title: "Decision-making at the sharp end: a survey of literature
+    related to decision-making in humanitarian contexts"
+  title-short: Decision-making at the sharp end
+  type: article-journal
+  URL: "https://jhumanitarianaction.springeropen.com/articles/10.1186/s41018-020-00068-2"
+  volume: 5
+- id: ebert_time_1973
+  accessed: "05:30:14"
+  author:
+  - family: Ebert
+    given: Ronald J.
+  - family: Piehl
+    given: Dewayne
+  container-title: California Management Review
+  DOI: 10.2307/41164456
+  ISSN: 0008-1256
+  issue: 4
+  issued: 1973-07-01
+  key: 3GJN8JDY
+  language: en
+  libraryID: 1
+  page: 35-41
+  providerKey: Zotero
+  Publisher: SAGE
+  source: SAGE Journals
+  title: "Time Horizon: A Concept for Management"
+  title-short: Time Horizon
+  type: article-journal
+  URL: "https://doi.org/10.2307/41164456"
+  volume: 15
+- id: eu_eurocodes_2024
+  accessed: "01:57:51"
+  author:
+  - family: EU
+  issued: 2024-11-22
+  key: XJ8UPAAJ
+  libraryID: 1
+  providerKey: Zotero
+  title: Eurocodes Homepage \| Eurocodes
+  type: webpage
+  URL: "https://eurocodes.jrc.ec.europa.eu/"
+- id: reisinger_guidance_202
+  author:
+  - family: Reisinger
+    given: Andy
+  - family: Howden
+    given: Mark
+  - family: Vera
+    given: Carolina
+  container-title: IPCC
+  issued: 0202
+  key: SVRT8BS3
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: Guidance for IPCC authors
+  type: article-journal
+- id: reisinger_guidance_2020
+  author:
+  - family: Reisinger
+    given: Andy
+  - family: Howden
+    given: Mark
+  - family: Vera
+    given: Carolina
+  container-title: IPCC
+  issued: 0202
+  key: SVRT8BS3
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: Guidance for IPCC authors
+  type: article-journal
+- id: msf_public_2010
+  accessed: "03:27:19"
+  author:
+  - family: MSF
+  issued: 2010
+  key: YUFE4V3P
+  libraryID: 1
+  providerKey: Zotero
+  title: Public Health Engineering in Precaurious Situation
+  type: webpage
+  URL: "https://medicalguidelines.msf.org/en"
+- id: maitlis_social_2005
+  accessed: "14:40:42"
+  author:
+  - family: Maitlis
+    given: Sally
+  container-title: Academy of Management Journal
+  container-title-short: AMJ
+  DOI: 10.5465/amj.2005.15993111
+  ISSN: 0001-4273, 1948-0989
+  issue: 1
+  issued: 2005-02
+  key: 375V3VII
+  language: en
+  libraryID: 1
+  page: 21-49
+  providerKey: Zotero
+  source: DOI.org (Crossref)
+  title: The Social Processes of Organizational Sensemaking
+  type: article-journal
+  URL: "http://journals.aom.org/doi/10.5465/amj.2005.15993111"
+  volume: 48
+- id: bradley_nexus_2023
+  accessed: "17:29:51"
+  author:
+  - family: Bradley
+    given: Miriam
+  container-title: The Politics and Everyday Practice of International
+    Humanitarianism
+  DOI: 10.1093/oso/9780198840695.003.0018
+  editor:
+  - family: Bradley
+    given: Miriam
+  ISBN: 978-0-19-884069-5
+  issued: 2023-07-04
+  key: JYMLNRF2
+  libraryID: 1
+  page: 0
+  providerKey: Zotero
+  publisher: Oxford University Press
+  source: Silverchair
+  title: Nexus Concept
+  type: chapter
+  URL: "https://doi.org/10.1093/oso/9780198840695.003.0018"
+- id: ocha_new_2017
+  author:
+  - family: OCHA
+  issued: 2017
+  key: DIIJAIA7
+  libraryID: 1
+  providerKey: Zotero
+  title: New Way of Working
+  type: report
+- id: turner_multifaceted_2023
+  accessed: "05:29:10"
+  author:
+  - family: Turner
+    given: John R.
+  - family: Allen
+    given: Jeff
+  - family: Hawamdeh
+    given: Suliman
+  - family: Mastanamma
+    given: Gujjula
+  container-title: Systems
+  DOI: 10.3390/systems11030145
+  ISSN: 2079-8954
+  issue: 3
+  issued: 2023-03
+  key: IA2J3SG8
+  language: en
+  libraryID: 1
+  Number: 3
+  page: 145
+  providerKey: Zotero
+  Publisher: Multidisciplinary
+  rights: "http://creativecommons.org/licenses/by/3.0/"
+  source: www.mdpi.com
+  title: "The Multifaceted Sensemaking Theory: A Systematic Literature
+    Review and Content Analysis on Sensemaking"
+  title-short: The Multifaceted Sensemaking Theory
+  type: article-journal
+  URL: "https://www.mdpi.com/2079-8954/11/3/145"
+  volume: 11
+- id: weick_collapse_2024
+  author:
+  - family: Weick
+    given: Karl E
+  issued: 2024
+  key: N58AGW8B
+  language: en
+  libraryID: 1
+  providerKey: Zotero
+  source: Zotero
+  title: "The Collapse of Sensemaking in Organizations: The Mann Gulch
+    Disaster"
+  type: article-journal
+- id: altay2022
+  accessed: "10:03:17"
+  author:
+  - family: Altay
+    given: Nezih
+  - family: Narayanan
+    given: Arunachalam
+  container-title: International Journal of Forecasting
+  container-title-short: International Journal of Forecasting
+  DOI: 10.1016/j.ijforecast.2020.08.001
+  ISSN: 01692070
+  issue: 3
+  issued: 2022-07
+  key: VR7TRSJF
+  language: en
+  libraryID: 1
+  page: 1234-1244
+  providerKey: Zotero
+  source: DOI.org (Crossref)
+  title: "Forecasting in humanitarian operations: Literature review and
+    research needs"
+  title-short: Forecasting in humanitarian operations
+  type: article-journal
+  URL: "https://linkinghub.elsevier.com/retrieve/pii/S0169207020301151"
+  volume: 38
+- id: markowitz_portfolio_1959
+  accessed: "02:33:15"
+  author:
+  - family: Markowitz
+    given: Harry M.
+  ISBN: 978-0-300-01372-6
+  issued: 1959
+  key: P6TFUGPA
+  libraryID: 1
+  providerKey: Zotero
+  publisher: Yale University Press
+  source: JSTOR
+  title: "Portfolio Selection: Efficient Diversification of Investments"
+  title-short: Portfolio Selection
+  type: book
+  URL: "https://www.jstor.org/stable/j.ctt1bh4c8h"
+- id: campbell_systems_
+  author:
+  - family: Campbell
+    given: Leah
+  key: RKMJLHHP
+  language: en
+  libraryID: 1
+  providerKey: 2509FBBE-5BB0-44C4-B119-6083A81ED673
+  source: Zotero
+  title: Systems thinking for humanitarians
+  type: article-journal
+- id: tatham_wicked_2011
+  accessed: "03:42:58"
+  author:
+  - family: Tatham
+    given: Peter
+  - family: Houghton
+    given: Luke
+  container-title: Journal of Humanitarian Logistics and Supply Chain
+    Management
+  DOI: 10.1108/20426741111122394
+  ISSN: 2042-6747
+  issue: 1
+  issued: 2011-01-01
+  key: DELTD265
+  libraryID: 1
+  page: 15-31
+  providerKey: Zotero
+  Publisher: Emerald
+  source: Emerald Insight
+  title: The wicked problem of humanitarian logistics and disaster
+    relief aid
+  type: article-journal
+  URL: "https://doi.org/10.1108/20426741111122394"
+  volume: 1
+- id: weick_sensemaking_1995
+  author:
+  - family: Weick
+    given: Karl E.
+  collection-title: Foundations for organizational science
+  edition: Nachdr.
+  ISBN: 978-0-8039-7177-6 978-0-8039-7176-9
+  issued: 1995
+  key: CA9U47MS
+  language: en
+  libraryID: 1
+  number-of-pages: 231
+  providerKey: Zotero
+  publisher: Sage Publ
+  publisher-place: Thousand Oaks, Calif.
+  source: K10plus ISBN
+  title: Sensemaking in organizations
+  type: book
+- id: vandergiessen_collective_2022
+  accessed: "16:14:51"
+  author:
+  - family: Giessen
+    given: Mark
+    non-dropping-particle: van der
+  - family: Langenbusch
+    given: Christina
+  - family: Jacobs
+    given: Gabriele
+  - family: Cornelissen
+    given: Joep
+  container-title: Human Relations
+  DOI: 10.1177/00187267211004688
+  ISSN: 0018-7267
+  issue: 5
+  issued: 2022-05-01
+  key: 7FLJTG92
+  libraryID: 1
+  page: 903-930
+  providerKey: Zotero
+  Publisher: SAGE
+  source: SAGE Journals
+  title: "Collective sensemaking in the local response to a grand
+    challenge: Recovery, alleviation and change-oriented responses to a
+    refugee crisis"
+  title-short: Collective sensemaking in the local response to a grand
+    challenge
+  type: article-journal
+  URL: "https://doi.org/10.1177/00187267211004688"
+  volume: 75
+- id: ferraro_tackling_2015
+  accessed: "05:14:41"
+  author:
+  - family: Ferraro
+    given: Fabrizio
+  - family: Etzion
+    given: Dror
+  - family: Gehman
+    given: Joel
+  container-title: Organization Studies
+  DOI: 10.1177/0170840614563742
+  ISSN: 0170-8406
+  issue: 3
+  issued: 2015-03-01
+  key: WXCPGKNB
+  language: en
+  libraryID: 1
+  page: 363-390
+  providerKey: Zotero
+  Publisher: SAGE
+  source: SAGE Journals
+  title: "Tackling Grand Challenges Pragmatically: Robust Action
+    Revisited"
+  title-short: Tackling Grand Challenges Pragmatically
+  type: article-journal
+  URL: "https://doi.org/10.1177/0170840614563742"
+  volume: 36
+...
