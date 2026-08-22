@@ -343,3 +343,51 @@ em, i {
   margin-top: 0.4rem;
   margin-bottom: 0;
 }
+
+/* Sankey
+#sankey {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#sankey svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+#sankey .node-label {
+  font-family: inherit;
+  font-size: 9px;
+  fill: #333;
+}
+
+#sankey .column-label {
+  font-family: inherit;
+  font-size: 9px;
+  font-weight: 600;
+  fill: #555;
+}
+
+#sankey .link {
+  fill: none;
+  mix-blend-mode: multiply;
+}
+
+.sankey-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: white;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  padding: 9px 12px;
+  font-family: inherit;
+  font-size: 10px;
+  line-height: 1.45;
+  color: #333;
+  box-shadow: 0 3px 12px rgba(0,0,0,.12);
+  opacity: 0;
+  z-index: 1000;
+}

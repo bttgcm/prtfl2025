@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-execute','listing-website','listing-format','listing-language','listing-title','listing-date','listing-categories','listing-image','listing-description','listing-external-url','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-project','listing-execute','listing-resources','listing-website','listing-format','listing-language','listing-title','listing-date','listing-categories','listing-image','listing-description','listing-external-url','listing-path','listing-outputHref','listing-date-modified','listing-author','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-title","listing-date","listing-categories","listing-image","listing-description","listing-external-url","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-title","listing-date","listing-categories","listing-image","listing-description","listing-external-url","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -328,7 +328,7 @@ window.Quarto = {
 
   </div>
 
-  <div class="project-card" data-index="7" data-categories="Design,Built Environment" data-listing-date-sort="1629410400000" data-listing-file-modified-sort="1787392675528" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+  <div class="project-card" data-index="7" data-categories="Design,Built Environment" data-listing-date-sort="1629410400000" data-listing-file-modified-sort="1787399040435" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
     <h2 class="listing-title anchored">
       <a href="https://bttgcm.github.io/prtfl2025/img/Butte_portfolio_arch.pdf" target="_blank" rel="noopener">
@@ -844,6 +844,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script type="module" src="sankey.js"></script>
 
 
 
