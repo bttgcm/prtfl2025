@@ -283,5 +283,63 @@ em, i {
   transform: rotate(-2deg);
 }
 
-/* Styling for the blog page*/
+/* Portfolio grid */
 
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem 2rem;
+}
+/* Project cards */
+
+.project-card {
+  margin-bottom: 1rem;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  filter: grayscale(0%);
+  transition: filter 0.8s ease;
+}
+
+.project-card:hover img {
+  filter: grayscale(100%);
+}
+
+/* Project title */
+
+.project-card h3 {
+  display: inline-block;
+  font-family: "Lexend", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-top: 0rem;
+  margin-bottom: 0.8rem;
+  color: #000000;
+}
+
+/* Remove underline from project links */
+
+.project-card a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: inherit;
+}
+
+/* Project description */
+
+.project-card p {
+  font-family: "JetBrains", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  font-weight: 300;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}

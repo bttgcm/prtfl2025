@@ -1,9 +1,28 @@
 [
   {
+    "listing": "/portfolio.html",
+    "items": [
+      "/portfolio/qmra.html",
+      "/portfolio/humhist.html",
+      "/portfolio/nsa.html",
+      "/portfolio/springstory.html",
+      "/portfolio/spring.html",
+      "/portfolio/urea.html",
+      "/portfolio/acled_inter.html",
+      "/portfolio/archi.html",
+      "/portfolio/qmra_art.html",
+      "/portfolio/wsecurity.html",
+      "/portfolio/alps.html",
+      "/portfolio/horizon.html"
+    ]
+  },
+  {
     "listing": "/blog.html",
     "items": [
       "/blog/springstory/index.html",
+      "/blog/nsa/index.html",
       "/blog/tree/index.html",
+      "/blog/humhist/index.html",
       "/blog/timehorizon/index.html",
       "/blog/SLU/slu.html",
       "/blog/rain/index.html",
