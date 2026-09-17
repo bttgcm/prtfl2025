@@ -283,21 +283,96 @@ em, i {
   transform: rotate(-2deg);
 }
 
-/* Portfolio grid */
+/* Portfolio: category filter dropdown */
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 3rem 2rem;
-}
-/* Project cards */
-
-.project-card {
-  margin-bottom: 1rem;
+.portfolio-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
 }
 
-.project-card img {
-  width: 100%;
+.portfolio-filter label {
+  font-size: 0.875rem;
+  color: #666666;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.portfolio-select {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-title);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  border-radius: 0;
+  padding: 0.3rem 0.25rem;
+  cursor: pointer;
+}
+
+.portfolio-select:hover {
+  color: var(--accent-link);
+}
+
+.portfolio-select:focus {
+  outline: none;
+  border-bottom-color: var(--accent-link);
+  color: var(--accent-link);
+}
+
+/* Portfolio: grouped-by-category list layout */
+
+.portfolio-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.portfolio-category {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2.5rem;
+}
+
+.portfolio-category:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.category-heading {
+  font-weight: 400;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-title);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Project rows */
+
+.project-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: inherit;
+}
+
+.project-thumb {
+  flex: 0 0 auto;
+  width: 140px;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center;
@@ -307,13 +382,18 @@ em, i {
   transition: filter 0.8s ease;
 }
 
-.project-card:hover img {
+.project-row:hover .project-thumb {
   filter: grayscale(100%);
+}
+
+.project-text {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 /* Project title */
 
-.project-card h3 {
+.project-text .listing-title {
   display: inline-block;
   font-family: "Lexend", Georgia, serif;
   font-size: 1rem;
@@ -321,27 +401,134 @@ em, i {
   font-weight: 600;
   letter-spacing: -0.02em;
   margin-top: 0rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
   color: #000000;
-}
-
-/* Remove underline from project links */
-
-.project-card a {
-  text-decoration: none !important;
-  border-bottom: none !important;
-  color: inherit;
 }
 
 /* Project description */
 
-.project-card p {
+.project-text .listing-description {
   font-family: "JetBrains", sans-serif;
   font-size: 0.8rem;
   line-height: 1.4;
   font-weight: 300;
   margin-top: 0.4rem;
   margin-bottom: 0;
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .project-row {
+    gap: 1rem;
+  }
+
+  .project-thumb {
+    width: 96px;
+  }
+}
+
+/* Expertise matrix: disciplines (rows) x technical skills (columns, adjacency-matrix style) */
+
+.matrix-scroll {
+  overflow: visible;
+  margin: 2.5rem 0;
+}
+
+@media (max-width: 600px) {
+  .matrix-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.5rem;
+  }
+}
+
+table.expertise-matrix {
+  border-collapse: collapse;
+  border: none;
+  width: auto;
+  margin: 0;
+}
+
+table.expertise-matrix th,
+table.expertise-matrix td {
+  border: 1px solid #000000;
+  padding: 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+table.expertise-matrix th.corner {
+  border: none;
+}
+
+table.expertise-matrix th.row-head {
+  text-align: left;
+  padding: 0.6rem 1rem 0.6rem 0;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #000000;
+  background-color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #000000;
+  white-space: nowrap;
+}
+
+table.expertise-matrix th.col-head {
+  width: 34px;
+  height: 150px;
+  min-width: 34px;
+  vertical-align: bottom;
+  position: relative;
+  border: none;
+  border-bottom: 1px solid #000000;
+  background-color: transparent;
+  overflow: visible;
+}
+
+table.expertise-matrix th.col-head span {
+  position: absolute;
+  left: 17px;
+  bottom: 6px;
+  display: block;
+  width: max-content;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+table.expertise-matrix td {
+  width: 34px;
+  height: 34px;
+}
+
+table.expertise-matrix td.dot::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+table.expertise-matrix caption {
+  caption-side: bottom;
+  text-align: left;
+  color: #666666;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+  font-family: "Inter", sans-serif;
 }
 
 /* Sankey

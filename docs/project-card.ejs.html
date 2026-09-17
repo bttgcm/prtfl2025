@@ -118,31 +118,99 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="project-grid list">
+&lt;%
+// Edit this list to control which categories appear and in what order.
+// A project tagged with more than one category will show up under each
+// of its matching categories. Any project whose categories don't match
+// anything below will be grouped under "Other".
+const categoryOrder = [
+  "Research",
+  "Water Security",
+  "Environmental Engineering",
+  "Data-viz",
+  "Design",
+  "Built Environment",
+  "Writing"
+];
 
-&lt;% for (const item of items) { %&gt;
+const groups = new Map();
+categoryOrder.forEach((cat) =&gt; groups.set(cat, []));
 
-  <div class="project-card" <%="metadataAttrs(item)" %="">&gt;
+const other = [];
+for (const item of items) {
+  const cats = item.categories || [];
+  let matched = false;
+  for (const cat of categoryOrder) {
+    if (cats.includes(cat)) {
+      groups.get(cat).push(item);
+      matched = true;
+    }
+  }
+  if (!matched) other.push(item);
+}
+if (other.length) groups.set("Other", other);
 
-    <h2 class="listing-title anchored">
-      <a href="<%- item['external-url'] %>" target="_blank" rel="noopener">
-        &lt;%= item.title %&gt;
+const visibleCategories = [...groups.keys()].filter((cat) =&gt; groups.get(cat).length &gt; 0);
+%&gt;
+
+<div class="portfolio-filter">
+  <label for="portfolio-category-select">Filter by category</label>
+  <select id="portfolio-category-select" class="portfolio-select">
+    <option value="all">All</option>
+    &lt;% for (const category of visibleCategories) { %&gt;
+      <option value="<%= category %>">&lt;%= category %&gt;</option>
+    &lt;% } %&gt;
+  </select>
+</div>
+
+<div class="portfolio-groups">
+
+&lt;% for (const [category, catItems] of groups) { %&gt;
+&lt;% if (catItems.length &gt; 0) { %&gt;
+
+  <section class="portfolio-category" data-category="<%= category %>">
+
+    <h2 class="category-heading anchored">&lt;%= category %&gt;</h2>
+
+    <div class="project-list">
+
+    &lt;% for (const item of catItems) { %&gt;
+
+      <a class="project-row" href="<%- item['external-url'] %>" target="_blank" rel="noopener" <%="metadataAttrs(item)" %="">&gt;
+        <img class="project-thumb" src="<%- item.image %>" alt="<%= item.title %>">
+        <div class="project-text">
+          <h3 class="listing-title anchored">&lt;%= item.title %&gt;</h3>
+          <p class="listing-description">&lt;%= item.description %&gt;</p>
+        </div>
       </a>
-    </h2>
 
-    <a href="<%- item['external-url'] %>" target="_blank" rel="noopener">
-      <img src="<%- item.image %>" alt="<%- item.title %>">
-    </a>
+    &lt;% } %&gt;
 
-    <p class="listing-description">
-      &lt;%= item.description %&gt;
-    </p>
+    </div>
 
-  </div>
+  </section>
 
+&lt;% } %&gt;
 &lt;% } %&gt;
 
 </div>
+
+<script>
+(function () {
+  var select = document.getElementById("portfolio-category-select");
+  if (!select) return;
+  var sections = document.querySelectorAll(".portfolio-category");
+  select.addEventListener("change", function () {
+    var value = this.value;
+    sections.forEach(function (section) {
+      var visible = (value === "all" || section.dataset.category === value);
+      section.style.display = visible ? "" : "none";
+      var heading = section.querySelector(".category-heading");
+      if (heading) heading.style.display = (value === "all") ? "" : "none";
+    });
+  });
+})();
+</script>
 
 
 
